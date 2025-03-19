@@ -323,8 +323,3 @@ make help
 ## 📝 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-This version should have a cleaner layout, better explanations, and use more standard Python practices. Let me know if you need more adjustments or further details!
-```
