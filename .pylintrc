@@ -1,0 +1,24 @@
+[MASTER]
+disable=
+    W0311,  # Indentation (black manages indentation)
+    C0301,  # Line length (black manages line length)
+    C0303,  # Trailing whitespace (black manages whitespace)
+    C0304,  # Missing blank line at the end of the file (black adds it)
+    C0305,  # Extra blank lines (black manages blank lines)
+    C0410,  # Import order (black sorts imports)
+    C0411,  # Import order (black sorts imports)
+    C0412,  # Grouping imports (black sorts imports)
+    C0413,  # Imports at the top of the file (black manages imports)
+    C0114,  # Missing module docstring
+    W0107,  # Unnecessary `pass` statement
+    R0903,  # Classes with too few methods
+    W0706,  # Errors in method argument definition
+    W0707,  # Method attribute names not adhering to standards
+    R0913,  # Too many arguments in a method
+    R0917,  # Too many branches in function
+    C0415,  # Imports in a loop
+    E1121,  # Too many function arguments
+    W0613   # Unused method argument
+
+[FORMAT]
+max-line-length=88  # Compatibility with black
