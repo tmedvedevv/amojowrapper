@@ -21,7 +21,7 @@ To install the latest version directly from the source:
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/yourusername/amojowrapper.git
+git clone https://github.com/tmedvedevv/amojowrapper.git
 ```
 
 2. **Navigate to the cloned repository**:
