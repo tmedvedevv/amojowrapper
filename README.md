@@ -1,6 +1,7 @@
 ![amojowrapper](.github/logo.png)
+[![PyPI Downloads](https://static.pepy.tech/badge/amojowrapper)](https://pepy.tech/projects/amojowrapper)
 
-🚀 **amojowrapper** [![PyPI Downloads](https://static.pepy.tech/badge/amojowrapper)](https://pepy.tech/projects/amojowrapper) is a Python library designed to interact with the [amoCRM Chat API](https://www.amocrm.ru/developers/content/chats/chat-api-reference). It provides a user-friendly API client for seamless communication with chat channels.
+🚀 **amojowrapper** is a Python library designed to interact with the [amoCRM Chat API](https://www.amocrm.ru/developers/content/chats/chat-api-reference). It provides a user-friendly API client for seamless communication with chat channels.
 
 ---
 
