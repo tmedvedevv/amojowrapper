@@ -1,6 +1,6 @@
 [project]
 name = "amojowrapper"
-version = "0.1.0"
+version = "0.1.1"
 description = "github.com/tmedvedevv/amojowrapper"
 authors = [
     {name = "tmedvedevv",email = "tmedvedevv@users.noreply.github.com"}

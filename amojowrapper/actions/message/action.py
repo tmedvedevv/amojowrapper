@@ -179,13 +179,20 @@ class AbstractMessageAction(MessageActionInterface):
 
     def _create_reply_to(self, kwargs: Dict) -> Optional[Dict]:
         """
-        Creates a reply_to dictionary if a reply_to_msgid is provided.
+        Creates a reply_to dictionary from the provided keyword arguments.
+        Looks for either 'reply_to_ref_msgid' or 'reply_to_msgid' in the kwargs.
+        If found, constructs a dictionary representing the reply_to message using
+        the appropriate key.
 
-        :param kwargs: Arguments for creating the reply_to.
-        :return: Dictionary representing the reply_to, or None if no reply_to_msgid is provided.
+        :param:kwargs (Dict): Keyword arguments possibly containing 'reply_to_ref_msgid' or 'reply_to_msgid'.
+        :return: Optional[Dict]: A dictionary representing the reply_to message, or None if neither key is provided.
         """
-        if msg_id := kwargs.get("reply_to_msgid"):
+        if msg_id := kwargs.get("reply_to_ref_msgid"):
             return ReplyTo(message={"id": msg_id}).model_dump(exclude_none=True)
+
+        if msg_id := kwargs.get("reply_to_msgid"):
+            return ReplyTo(message={"msgid": msg_id}).model_dump(exclude_none=True)
+
         return None
 
     def _validate_conversation_params(self, kwargs: Dict) -> None:
@@ -246,7 +253,6 @@ class MessageAction(AbstractMessageAction):
     def send(self, **kwargs) -> MessageResponse:
         """
         Sends a message using the provided arguments.
-
         Possible parameters include:
             sender_id
             sender_ref_id
@@ -255,6 +261,7 @@ class MessageAction(AbstractMessageAction):
             sender_profile_email
             sender_profile_link
             reply_to_msgid
+            reply_to_ref_msgid
             source_external_id
             conversation_id
             conversation_ref_id
